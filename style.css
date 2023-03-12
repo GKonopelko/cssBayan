@@ -11,7 +11,7 @@
     font-size: 3vw;
   }
   @media (max-width: 320px) {
-    font-size: 4vw;
+    font-size: 3vw;
     .bayan-label::after {
       display: none;
     }
@@ -19,38 +19,36 @@
 }
 h3 {
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .container {
   max-width: 95%;
-  
 }
+
 .bayan {
   max-width: 90%;
   box-shadow: 0 0 1% rgba(0, 0, 0, 0.2);
-  border-radius: 1%;
-  /*overflow: hidden;*/
+  border-radius: 2%;
+  overflow: hidden;
   background: lightgray;
 }
 
 .bayan-label {
   display: flex;
   width: 100%;
-  font-size: 3vw
+  font-size: 4vw;
   padding: 1%;
   color: black;
   cursor: pointer;
   position: static;
   transition: 1s;
   justify-content: space-between;
-
-
 }
 .bayan-content {
-  display: block; 
+  display: block;
   width: 100%;
-  font-size: 3vw
+  font-size: 3vw;
   padding: 1%;
   color: black;
   cursor: pointer;
@@ -62,7 +60,7 @@ h3 {
   display: flex;
   background: rgba(0, 0, 0, 0.1);
   transition: transform 10ms;
-  font-size: 4vw
+  font-size: 3vw;
 }
 .bayan-label:hover + .bayan-content {
   display: flex;
@@ -83,7 +81,6 @@ h3 {
 .bayan-label:checked ~ .bayan-label::after {
   content: "\2714";
   display: block;
- 
 }
 .bayan-content {
   background: white;
@@ -101,9 +98,4 @@ h3 {
 .bayan-input:checked ~ .bayan-label::after {
   content: "\2714";
   display: block;
-  
 }
-
-
-
-
