@@ -1,0 +1,162 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: arial;
+  font-size: 1rem;
+  background-color: rgb(237, 233, 226);
+}
+
+.main {
+  max-width: 60%;
+  padding: 2%;
+  margin: auto;
+}
+
+.bayan {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+h1 {
+  border-bottom: 0.1em solid #d9d9d9de;
+  padding-bottom: 2%;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.bayan__element {
+  display: flex;
+  flex-direction: column;
+  padding: 3% 0 1.5% 0;
+  border-bottom: 0.1em solid #d9d9d9de;
+}
+
+.bayan__element > input {
+  display: none;
+}
+
+.bayan__title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.bayan__title > h2 {
+  opacity: 0.6;
+}
+
+.btn_bayan {
+  background: url("rabbit.png") 0 0/100% 100% no-repeat;
+  align-self: center;
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(300deg);
+  opacity: 0;
+  transition: all ease 1s;
+}
+
+.img__wrap {
+  display: inline-block;
+  align-self: center;
+  max-width: 80%;
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.img__wrap > img {
+  transform: scale(0.8);
+  transition: all 1.2s;
+  width: 100%;
+}
+
+.bayan__element:active .bayan__title h2 {
+  color: rgba(230, 228, 244, 0.258);
+}
+
+.bayan__element:active .bayan__title .btn_bayan {
+  background: url("rabbit.png") 0 0/100% 100% no-repeat;
+}
+
+.bayan__element:active .img__wrap .bayan__img {
+  opacity: 0.5;
+}
+
+.bayan__input:checked ~ .img__wrap {
+  height: auto;
+  opacity: 1;
+}
+
+.bayan__input:checked ~ .img__wrap > img {
+  transform: scale(1);
+}
+
+.bayan__input:checked ~ .bayan__title > h2 {
+  opacity: 1;
+}
+
+.bayan__input:checked ~ .bayan__title > .btn_bayan {
+  transform: rotate(50deg);
+}
+
+@media (hover: hover) {
+  .bayan__element {
+    cursor: pointer;
+  }
+
+  .bayan:hover .bayan__title > h2 {
+    opacity: 1;
+  }
+
+  .bayan__element:hover .btn_bayan {
+    transform: rotate(90deg);
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .bayan:hover .btn_bayan {
+    opacity: 1;
+  }
+
+  .bayan__element:hover .img__wrap > img {
+    transform: scale(1);
+  }
+
+  .bayan__element:hover .img__wrap {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  html {
+    font-size: 90%;
+  }
+
+  .bayan__element {
+    padding: 3% 0 3% 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 150%;
+  }
+}
